@@ -1,0 +1,14 @@
+# Node
+node_modules/
+
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
