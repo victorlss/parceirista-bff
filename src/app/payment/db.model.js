@@ -2,93 +2,63 @@ const mongoose = require('mongoose')
 
 const paymentSchema = new mongoose.Schema({
   userId: {
-    type: 'String'
+    type: String
   },
-<<<<<<< HEAD
-  seller_id: {
-    type: 'String'
-  },
-  amount: {
-    type: 'Number'
-  },
-  currency: {
-    type: 'String'
-  },
-  userId: {
-    type: 'String'
-  },
-  order_id: {
-    type: 'String'
-  },
-  status: {
-    type: 'String'
-  },
-  received_at: {
-    type: 'Date'
-  },
-  credit: {
-    delayed: {
-      type: 'Boolean'
-    },
-    authorization_code: {
-      type: 'Date'
-=======
   paymentResponse: {
     payment_id: {
-      type: 'String'
->>>>>>> 20c7cde5f5ddaf44a1605d6e9b8f0ccc9fffb88b
+      type: String
     },
     seller_id: {
-      type: 'String'
+      type: String
     },
     amount: {
-      type: 'Number'
+      type: Number
     },
     currency: {
-      type: 'String'
+      type: String
     },
     order_id: {
-      type: 'String'
+      type: String
     },
     status: {
-      type: 'String'
+      type: String
     },
     received_at: {
-      type: 'Date'
+      type: Date
     },
     credit: {
       delayed: {
-        type: 'Boolean'
+        type: Boolean
       },
       authorization_code: {
-        type: 'Date'
+        type: Date
       },
       authorized_at: {
-        type: 'Date'
+        type: Date
       },
       reason_code: {
-        type: 'Number'
+        type: Number
       },
       reason_message: {
-        type: 'String'
+        type: String
       },
       acquirer: {
-        type: 'String'
+        type: String
       },
       soft_descriptor: {
-        type: 'Date'
+        type: String
       },
       brand: {
-        type: 'String'
+        type: String
       },
       terminal_nsu: {
-        type: 'Date'
+        type: Date
       },
       acquirer_transaction_id: {
-        type: 'String'
+        type: String
       },
       transaction_id: {
-        type: 'String'
+        type: String
       }
     }
   }
