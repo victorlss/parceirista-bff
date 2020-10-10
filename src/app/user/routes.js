@@ -3,7 +3,7 @@ const controller = require('./controller')
 
 const router = express.Router()
 
-router.get('/users', async (request, response, next) => {
+router.get('/', async (request, response, next) => {
   try {
     response.send(await controller.index())
   } catch (e) {
@@ -11,7 +11,7 @@ router.get('/users', async (request, response, next) => {
   }
 })
 
-router.get('/users/professional', async (request, response, next) => {
+router.get('/professional', async (request, response, next) => {
   try {
     response.send(await controller.getProfessionals())
   } catch (e) {
@@ -19,7 +19,7 @@ router.get('/users/professional', async (request, response, next) => {
   }
 })
 
-router.get('/users/business', async (request, response, next) => {
+router.get('/business', async (request, response, next) => {
   try {
     response.send(await controller.getBusinnesses())
   } catch (e) {

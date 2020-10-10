@@ -6,6 +6,6 @@ const user = require('./../app/user/routes')
 const router = express.Router()
 router.use('/health', health)
 router.use('/payment', payment)
-router.use('/user', user)
+router.use('/users', user)
 
 module.exports = router
