@@ -5,11 +5,7 @@ const resolver = require('../../utils/router-handler.utils')
 const router = express.Router()
 
 router.get('/', async (request, response, next) => {
-  resolver.handle(response, next, async () => await controller.index())
-})
-
-router.post('/', async (request, response, next) => {
-  resolver.handle(response, next, async () => await controller.payWithCreditCard())
+  resolver.handle(response, next, async () => controller.getServices())
 })
 
 module.exports = router

@@ -1,12 +1,12 @@
 const index = async () => {
-  return { message: 'Payment' }
+  return { message: 'Users' }
 }
 
 const getProfessionals = async (type) => {
   const payload = [
     {
       userId: 0,
-      name: "Joao Designer"
+      name: 'Joao Designer'
     }
   ];
   return { payload }
@@ -16,7 +16,7 @@ const getBusinnesses = async (type) => {
   const payload = [
     {
       userId: 1,
-      name: "Bolo no Potão"
+      name: 'Bolo no Potão'
     }
   ];
   return { payload }

@@ -1,14 +1,11 @@
 const express = require('express')
 const controller = require('./controller')
+const resolver = require('../../utils/router-handler.utils')
 
 const router = express.Router()
 
 router.get('/', async (request, response, next) => {
-  try {
-    response.send(await controller.index())
-  } catch (e) {
-    next(e)
-  }
+  resolver.handle(response, next, async () => controller.index())
 })
 
 module.exports = router
