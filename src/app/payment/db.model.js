@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 
 const paymentSchema = new mongoose.Schema({
-  payment_id: {
+  userId: {
     type: 'String'
   },
+<<<<<<< HEAD
   seller_id: {
     type: 'String'
   },
@@ -31,35 +32,67 @@ const paymentSchema = new mongoose.Schema({
     },
     authorization_code: {
       type: 'Date'
+=======
+  paymentResponse: {
+    payment_id: {
+      type: 'String'
+>>>>>>> 20c7cde5f5ddaf44a1605d6e9b8f0ccc9fffb88b
     },
-    authorized_at: {
-      type: 'Date'
+    seller_id: {
+      type: 'String'
     },
-    reason_code: {
+    amount: {
       type: 'Number'
     },
-    reason_message: {
+    currency: {
       type: 'String'
     },
-    acquirer: {
+    order_id: {
       type: 'String'
     },
-    soft_descriptor: {
+    status: {
+      type: 'String'
+    },
+    received_at: {
       type: 'Date'
     },
-    brand: {
-      type: 'String'
-    },
-    terminal_nsu: {
-      type: 'Date'
-    },
-    acquirer_transaction_id: {
-      type: 'String'
-    },
-    transaction_id: {
-      type: 'String'
+    credit: {
+      delayed: {
+        type: 'Boolean'
+      },
+      authorization_code: {
+        type: 'Date'
+      },
+      authorized_at: {
+        type: 'Date'
+      },
+      reason_code: {
+        type: 'Number'
+      },
+      reason_message: {
+        type: 'String'
+      },
+      acquirer: {
+        type: 'String'
+      },
+      soft_descriptor: {
+        type: 'Date'
+      },
+      brand: {
+        type: 'String'
+      },
+      terminal_nsu: {
+        type: 'Date'
+      },
+      acquirer_transaction_id: {
+        type: 'String'
+      },
+      transaction_id: {
+        type: 'String'
+      }
     }
   }
+
 }, { timestamps: true })
 
 module.exports = mongoose.model('payment', paymentSchema, 'payments')
