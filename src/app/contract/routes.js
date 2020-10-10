@@ -20,12 +20,4 @@ router.delete('/', async (request, response, next) => {
   await resolver.handle(response, next, async () => await controller.deleteContract(request.body))
 })
 
-router.post('/payment', async (request, response, next) => {
-  await resolver.handle(response, next, async () => await controller.createPayment(request.body))
-})
-
-router.post('/rating', async (request, response, next) => {
-  await resolver.handle(response, next, async () => await controller.createRating(request.body))
-})
-
 module.exports = router

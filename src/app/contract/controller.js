@@ -1,70 +1,26 @@
+const contractSchema = require('./db.model')
+
 const index = async () => {
   return { message: 'Services' }
 }
 
 const getContracts = async (userId) => {
-  const payload = [
-    {
-      contractId: 0,
-      name: 'Criar Logomarca com Fulano de Tal',
-      business: {
-        businessId: 0,
-        name: 'Bolo no Potao'
-      },
-      professional: {
-        professionalId: 1,
-        name: 'Joao Designer'
-      }
-    }
-  ]
-  return { payload }
+  const contracts = await contractSchema.find({ $or: [{ businessId: userId }, { professionalId: userId }] })
+  return { contracts }
 }
 
 const getContract = async (contractId) => {
-  const payload = {
-    contractId: 0,
-    name: 'Criar Logomarca com Fulano de Tal',
-    business: {
-      businessId: 0,
-      name: 'Bolo no Potao'
-    },
-    professional: {
-      professionalId: 1,
-      name: 'Joao Designer'
-    }
-  }
-
-  return { payload }
+  const contract = await contractSchema.find({ _id: contractId })
+  return { contract }
 }
 
 const createContract = async (contract) => {
-  // TODO Creation stuff
-  const payload = {
-    contractId: 0
-  }
-  return { payload }
+  const newContract = await contractSchema.create(contract)
+  return newContract._id
 }
 
-const createPayment = async (contract) => {
-  // TODO Creation stuff
-  const payload = {
-    paymentId: 0
-  }
-  return { payload }
+const deleteContract = async (contractId) => {
+  await contractSchema.deleteOne({ _id: contractId })
 }
 
-const deleteContract = async (contracId) => {
-  // TODO Remove stuff
-
-  return true
-}
-
-const createRating = async (rating) => {
-  // TODO Remove stuff
-  const payload = {
-    ratingId: 0
-  }
-  return payload
-}
-
-module.exports = { index, getContracts, getContract, createContract, deleteContract, createPayment, createRating }
+module.exports = { index, getContracts, getContract, createContract, deleteContract }

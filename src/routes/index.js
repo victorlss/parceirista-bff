@@ -2,12 +2,16 @@ const express = require('express')
 const health = require('./../app/health/routes')
 const user = require('./../app/user/routes')
 const contract = require('./../app/contract/routes')
-const login = require('./../app/login/routes')
+const rating = require('./../app/rating/routes')
+const payment = require('./../app/payment/routes')
+const auth = require('./../app/auth/routes')
 
 const router = express.Router()
 router.use('/health', health)
 router.use('/users', user)
 router.use('/contracts', contract)
-router.use('/login', login)
+router.use('/payments', payment)
+router.use('/ratings', rating)
+router.use('/auth', auth)
 
 module.exports = router
