@@ -1,15 +1,19 @@
 const index = async () => {
-  return { message: 'Services' }
+  return { message: 'Login' }
 }
 
-const getServices = async (type) => {
+const login = async (user) => {
   const payload = [
     {
-      serviceId: 0,
-      name: 'Criar Logomarca'
+      userId: 0,
+      name: 'Fulano de Tal'
     }
-  ];
+  ]
   return { payload }
 }
 
-module.exports = { index, getServices }
+const logout = async (user) => {
+  return true
+}
+
+module.exports = { index, login, logout }

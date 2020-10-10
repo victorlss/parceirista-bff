@@ -16,7 +16,7 @@ const getContracts = async (userId) => {
         name: 'Joao Designer'
       }
     }
-  ];
+  ]
   return { payload }
 }
 
@@ -32,7 +32,7 @@ const getContract = async (contractId) => {
       professionalId: 1,
       name: 'Joao Designer'
     }
-  };
+  }
 
   return { payload }
 }
@@ -59,4 +59,12 @@ const deleteContract = async (contracId) => {
   return true
 }
 
-module.exports = { index, getContracts, getContract, createContract, deleteContract, createPayment }
+const createRating = async (rating) => {
+  // TODO Remove stuff
+  const payload = {
+    ratingId: 0
+  }
+  return payload
+}
+
+module.exports = { index, getContracts, getContract, createContract, deleteContract, createPayment, createRating }
