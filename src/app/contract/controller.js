@@ -16,7 +16,7 @@ const getContracts = async (userId) => {
         name: 'Joao Designer'
       }
     }
-  ];
+  ]
   return { payload }
 }
 
@@ -32,7 +32,7 @@ const getContract = async (contractId) => {
       professionalId: 1,
       name: 'Joao Designer'
     }
-  };
+  }
 
   return { payload }
 }
