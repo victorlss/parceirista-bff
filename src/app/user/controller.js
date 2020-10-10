@@ -1,6 +1,3 @@
-const token = require('./getnet/token')
-const credit = require('./getnet/credit')
-
 const index = async () => {
   return { message: 'Payment' }
 }
