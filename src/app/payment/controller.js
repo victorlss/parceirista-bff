@@ -11,12 +11,12 @@ const getPayments = async (userId) => {
   return { payments }
 }
 
-const createPayment = async (userId, payment) => {
-  const cartonToken = await token.tokenizeCarton(payment.credid_card.number)
+const createPayment = async (userId, paymentRequest) => {
+  const cartonToken = await token.tokenizeCarton(paymentRequest.credid_card.number)
 
   const payload = {
     seller_id: '7abf410c-2b3b-4403-8221-f35e68a3582e',
-    amount: payment.amount.toString(),
+    amount: paymentRequest.amount.toString(),
     order: {
       order_id: '12345'
     },
@@ -37,20 +37,20 @@ const createPayment = async (userId, payment) => {
       number_installments: 1,
       card: {
         number_token: cartonToken,
-        cardholder_name: payment.credid_card.cardholder_name,
-        expiration_month: payment.credid_card.expiration_month.toString(),
-        expiration_year: payment.credid_card.expiration_year.toString()
+        cardholder_name: paymentRequest.credid_card.cardholder_name,
+        expiration_month: paymentRequest.credid_card.expiration_month.toString(),
+        expiration_year: paymentRequest.credid_card.expiration_year.toString()
       }
     }
   }
 
   const paymentResponse = await credit.payWithCreditCard(payload)
-  paymentSchema.create({
+  const payment = await paymentSchema.create({
     userId,
     paymentResponse
   })
 
-  return { paymentMessage: payment, paymentMessageResponse: paymentResponse }
+  return { payment }
 }
 
 module.exports = { index, createPayment, getPayments }
