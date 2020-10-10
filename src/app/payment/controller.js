@@ -44,10 +44,13 @@ const createPayment = async (userId, payment) => {
     }
   }
 
-  const paymentMessageResponse = await credit.payWithCreditCard(payload)
-  paymentMessageResponse.userId = userId
-  const paymentMessage = paymentSchema.create(paymentMessageResponse)
-  return { paymentMessage, paymentMessageResponse }
+  const paymentResponse = await credit.payWithCreditCard(payload)
+  paymentSchema.create({
+    userId,
+    paymentResponse
+  })
+
+  return { paymentMessage: payment, paymentMessageResponse: paymentResponse }
 }
 
 module.exports = { index, createPayment, getPayments }
