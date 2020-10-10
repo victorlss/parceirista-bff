@@ -2,63 +2,63 @@ const mongoose = require('mongoose')
 
 const paymentSchema = new mongoose.Schema({
   userId: {
-    type: 'String'
+    type: String
   },
   paymentResponse: {
     payment_id: {
-      type: 'String'
+      type: String
     },
     seller_id: {
-      type: 'String'
+      type: String
     },
     amount: {
-      type: 'Number'
+      type: Number
     },
     currency: {
-      type: 'String'
+      type: String
     },
     order_id: {
-      type: 'String'
+      type: String
     },
     status: {
-      type: 'String'
+      type: String
     },
     received_at: {
-      type: 'Date'
+      type: Date
     },
     credit: {
       delayed: {
-        type: 'Boolean'
+        type: Boolean
       },
       authorization_code: {
-        type: 'Date'
+        type: Date
       },
       authorized_at: {
-        type: 'Date'
+        type: Date
       },
       reason_code: {
-        type: 'Number'
+        type: Number
       },
       reason_message: {
-        type: 'String'
+        type: String
       },
       acquirer: {
-        type: 'String'
+        type: String
       },
       soft_descriptor: {
-        type: 'Date'
+        type: String
       },
       brand: {
-        type: 'String'
+        type: String
       },
       terminal_nsu: {
-        type: 'Date'
+        type: Date
       },
       acquirer_transaction_id: {
-        type: 'String'
+        type: String
       },
       transaction_id: {
-        type: 'String'
+        type: String
       }
     }
   }
