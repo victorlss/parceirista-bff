@@ -22,4 +22,12 @@ const getBusinnesses = async (type) => {
   return { payload }
 }
 
-module.exports = { index, getProfessionals, getBusinnesses }
+const getUser = async (userId) => {
+  const payload = {
+    userId: 1,
+    name: 'Bolo no Potão'
+  }
+  return { payload }
+}
+
+module.exports = { index, getProfessionals, getBusinnesses, getUser }

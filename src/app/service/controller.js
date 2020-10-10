@@ -8,7 +8,7 @@ const getServices = async (type) => {
       serviceId: 0,
       name: 'Criar Logomarca'
     }
-  ];
+  ]
   return { payload }
 }
 
