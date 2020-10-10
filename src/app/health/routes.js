@@ -1,11 +1,11 @@
 const express = require('express')
-const controller = require('./controller')
 
 const router = express.Router()
+const now = Date(Date.now())
 
 router.get('/', async (request, response, next) => {
   try {
-    response.send(await controller.index())
+    response.send(`Deployed at: ${now}`)
   } catch (e) {
     next(e)
   }
