@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const contractSchema = new mongoose.Schema({
   serviceId: { type: String },
   businessId: { type: String },
-  professionald: { type: String },
+  professionalId: { type: String },
   fee: { type: Number },
   discount: { type: String },
   deliverAt: { type: String },
