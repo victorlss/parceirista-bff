@@ -12,16 +12,20 @@ router.get('/:id', async (request, response, next) => {
   await resolver.handle(response, next, async () => await controller.getContract(request.params.id))
 })
 
-router.post('/:id', async (request, response, next) => {
-  await resolver.handle(response, next, async () => await controller.createPayment(request.body))
-})
-
 router.post('/', async (request, response, next) => {
   await resolver.handle(response, next, async () => await controller.createContract(request.body))
 })
 
 router.delete('/', async (request, response, next) => {
   await resolver.handle(response, next, async () => await controller.deleteContract(request.body))
+})
+
+router.post('/payment', async (request, response, next) => {
+  await resolver.handle(response, next, async () => await controller.createPayment(request.body))
+})
+
+router.post('/rating', async (request, response, next) => {
+  await resolver.handle(response, next, async () => await controller.createRating(request.body))
 })
 
 module.exports = router

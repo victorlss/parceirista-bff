@@ -25,7 +25,7 @@ const getBusinnesses = async (type) => {
 const getUser = async (userId) => {
   const payload = {
     userId: 1,
-    name: 'Bolo no Potão'
+    name: 'Emerson Contador'
   }
   return { payload }
 }
