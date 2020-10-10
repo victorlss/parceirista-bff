@@ -13,6 +13,9 @@ const paymentSchema = new mongoose.Schema({
   currency: {
     type: 'String'
   },
+  userId: {
+    type: 'String'
+  },
   order_id: {
     type: 'String'
   },

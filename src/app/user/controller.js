@@ -15,4 +15,18 @@ const getBusinnesses = async () => {
   return { users }
 }
 
-module.exports = { getAll, getProfessionals, getBusinnesses }
+const getUser = async (userId) => {
+  const user = await userSchema.findOne({ _id: userId })
+  return user
+}
+
+const createUser = async(user) => {
+  const newUser = await userSchema.create(user)
+  return newUser._id
+}
+
+const deleteUser = async(userId) => {
+  await userSchema.deleteOne({ _id: userId })
+}
+
+module.exports = { getAll, getProfessionals, getBusinnesses, getUser, createUser, deleteUser }
