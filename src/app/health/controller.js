@@ -1,5 +1,7 @@
+const now = Date(Date.now())
+
 const index = async () => {
-  return { message: 'Health' }
+  return { deployed_at: now }
 }
 
 module.exports = { index }

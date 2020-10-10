@@ -8,7 +8,7 @@ const getProfessionals = async (type) => {
       userId: 0,
       name: 'Joao Designer'
     }
-  ];
+  ]
   return { payload }
 }
 
@@ -18,7 +18,7 @@ const getBusinnesses = async (type) => {
       userId: 1,
       name: 'Bolo no Potão'
     }
-  ];
+  ]
   return { payload }
 }
 
