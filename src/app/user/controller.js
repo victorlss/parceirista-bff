@@ -1,41 +1,18 @@
-const index = async () => {
-  return { message: 'Users' }
+const userSchema = require('./db.model')
+
+const getAll = async () => {
+  const users = await userSchema.find()
+  return { users }
 }
 
-const getProfessionals = async (type) => {
-  const payload = [
-    {
-      userId: 0,
-      name: 'Joao Designer'
-    }
-  ]
-  return { payload }
+const getProfessionals = async () => {
+  const users = await userSchema.find({ userType: 'professional' })
+  return { users }
 }
 
-const getBusinnesses = async (type) => {
-  const payload = [
-    {
-      userId: 1,
-      name: 'Bolo no Potão'
-    }
-  ]
-  return { payload }
+const getBusinnesses = async () => {
+  const users = await userSchema.find({ userType: 'business' })
+  return { users }
 }
 
-const getUser = async (userId) => {
-  const payload = {
-    userId: 1,
-    name: 'Emerson Contador'
-  }
-  return { payload }
-}
-
-const createCard = async (card) => {
-  const payload = {
-    cardId: 1,
-    number: '5555 5555 5555 5555 5555 '
-  }
-  return { payload }
-}
-
-module.exports = { index, getProfessionals, getBusinnesses, getUser, createCard }
+module.exports = { getAll, getProfessionals, getBusinnesses }

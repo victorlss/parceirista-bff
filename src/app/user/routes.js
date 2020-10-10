@@ -4,6 +4,10 @@ const resolver = require('../../utils/router-handler.utils')
 
 const router = express.Router()
 
+router.get('/', async (request, response, next) => {
+  await resolver.handle(response, next, async () => await controller.getAll())
+})
+
 router.get('/professional', async (request, response, next) => {
   await resolver.handle(response, next, async () => await controller.getProfessionals())
 })
