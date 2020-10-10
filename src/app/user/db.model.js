@@ -9,6 +9,6 @@ const userSchema = new mongoose.Schema({
   email: { type: String },
   telefone: { type: String },
   userType: { type: String }
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model('users', userSchema, 'users')
