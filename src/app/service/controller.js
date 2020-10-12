@@ -1,5 +1,4 @@
 const serviceSchema = require('./db.model')
-const userSchema = require('../user/db.model')
 
 const index = async () => {
   return { message: 'Login' }
@@ -7,9 +6,6 @@ const index = async () => {
 
 const getServices = async (serviceId) => {
   const services = await serviceSchema.find({ serviceId: serviceId })
-  for (const service of services) {
-    service.set('professional', await userSchema.findById(service.professionalId), { strict: false });
-  }
   return { services }
 }
 
@@ -18,4 +14,9 @@ const createService = async (service) => {
   return newService._id
 }
 
-module.exports = { index, createService, getServices }
+const getByProfessionalId = async (professionalId) => {
+  const services = await serviceSchema.find({ professionalId })
+  return { services }
+}
+
+module.exports = { index, createService, getServices, getByProfessionalId }
