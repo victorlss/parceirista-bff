@@ -5,7 +5,9 @@ const index = async () => {
 }
 
 const login = async (data) => {
-  const user = await userSchema.findOne({ email: data.email })
+  console.log(data)
+  const user = await userSchema.findOne({ email: data.username })
+  console.log(user)
   return user
 }
 
