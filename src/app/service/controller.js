@@ -1,19 +1,21 @@
+const serviceSchema = require('./db.model')
+const userSchema = require('../user/db.model')
+
 const index = async () => {
   return { message: 'Login' }
 }
 
-const login = async (user) => {
-  const payload = [
-    {
-      userId: 0,
-      name: 'Fulano de Tal'
-    }
-  ]
-  return { payload }
+const getServices = async (serviceId) => {
+  const services = await serviceSchema.find({ serviceId: serviceId })
+  for (const service of services) {
+    service.set('professional', await userSchema.findById(service.professionalId), { strict: false });
+  }
+  return { services }
 }
 
-const logout = async (user) => {
-  return true
+const createService = async (service) => {
+  const newService = await serviceSchema.create(service)
+  return newService._id
 }
 
-module.exports = { index, login, logout }
+module.exports = { index, createService, getServices }
