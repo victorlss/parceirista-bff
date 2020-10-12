@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Schema = require('mongoose')
 
 const contractSchema = new mongoose.Schema({
   serviceId: { type: String },
@@ -7,7 +8,8 @@ const contractSchema = new mongoose.Schema({
   fee: { type: Number },
   discount: { type: String },
   deliverAt: { type: String },
-  deliveredAt: { type: String }
+  deliveredAt: { type: String },
+  services: [{ type: Schema.Types.ObjectId, ref: 'service' }]
 }, { timestamps: true })
 
 module.exports = mongoose.model('contract', contractSchema, 'users')

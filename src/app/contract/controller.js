@@ -5,7 +5,9 @@ const index = async () => {
 }
 
 const getContracts = async (userId) => {
-  const contracts = await contractSchema.find({ $or: [{ businessId: userId }, { professionalId: userId }] })
+  const contracts = await contractSchema
+    .find({ $or: [{ businessId: userId }, { professionalId: userId }] }).populate('service')
+
   return { contracts }
 }
 
@@ -23,4 +25,10 @@ const deleteContract = async (contractId) => {
   await contractSchema.deleteOne({ _id: contractId })
 }
 
-module.exports = { index, getContracts, getContract, createContract, deleteContract }
+module.exports = {
+  index,
+  getContracts,
+  getContract,
+  createContract,
+  deleteContract
+}
