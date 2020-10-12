@@ -6,7 +6,7 @@ const index = async () => {
 
 const login = async (data) => {
   console.log(data)
-  const user = await userSchema.findOne({ email: data.username })
+  const user = await userSchema.findOne({ email: data.username.toLowerCase() })
   console.log(user)
   return user
 }
