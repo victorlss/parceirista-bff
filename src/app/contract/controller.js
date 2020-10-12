@@ -5,9 +5,7 @@ const index = async () => {
 }
 
 const getContracts = async (userId) => {
-  const contracts = await contractSchema
-    .find({ $or: [{ businessId: userId }, { professionalId: userId }] }).populate('service')
-
+  const contracts = await contractSchema.find({ $or: [{ businessId: userId }, { professionalId: userId }] })
   return { contracts }
 }
 
