@@ -1,6 +1,4 @@
-# HACKATHON GETNET 2020
-
-## PARCEIRISTA
+# PARCEIRISTA - HACKATHON GETNET 2020
 ![PARCEIRISTA](https://github.com/victorlss/parceirista-bff/blob/main/assets/logo.png?raw=true)
 
 ### PROPOSTA DE VALOR
