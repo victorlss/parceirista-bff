@@ -6,7 +6,7 @@ O Parceirista tem como missão facilitar a vida dos microempreendedores por meio
 Gerando demanda para profissionais de diversas áreas ao mesmo tempo que garante a criação de negócios mais preparados para crescer.
 
 ### TECNOLOGIA
-#### REACT NATIVE + EXPO
+#### REACT NATIVE + EXPO ([Repositório do aplicativo](https://github.com/victorlss/parceirista-app))
 Com React Native e EXPO garantimos a criação de uma aplição robusta, estável e de fácil manutenção,com grande suporte para expansão de funcionalidades.
 #### NODE + EXPRESS
 Com esta stack conseguimos garantir uma aplicação leve com capacidades elásticas, podendo ser fácilmente dockerizada e orquestrada com Kubernetes.
