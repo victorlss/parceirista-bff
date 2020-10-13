@@ -20,13 +20,20 @@ const getUser = async (userId) => {
   return user
 }
 
-const createUser = async(user) => {
+const createUser = async (user) => {
   const newUser = await userSchema.create(user)
   return newUser._id
 }
 
-const deleteUser = async(userId) => {
+const deleteUser = async (userId) => {
   await userSchema.deleteOne({ _id: userId })
 }
 
-module.exports = { getAll, getProfessionals, getBusinnesses, getUser, createUser, deleteUser }
+module.exports = {
+  getAll,
+  getProfessionals,
+  getBusinnesses,
+  getUser,
+  createUser,
+  deleteUser
+}
