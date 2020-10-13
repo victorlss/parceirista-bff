@@ -20,6 +20,9 @@ const createService = async (service) => {
 
 const getByProfessionalId = async (professionalId) => {
   const services = await serviceSchema.find({ professionalId })
+  for (const service of services) {
+    service.set('professional', await userSchema.findById(service.professionalId), { strict: false });
+  }
   return { services }
 }
 
