@@ -15,10 +15,10 @@ NoSQL mais famoso do momento, consegue suportar gigantescos fluxos de dados. Nos
 #### HEROKU + CONTINOUS INTEGRATION = ENTREGA DE VALOR CONTÍNUA
 Nossa aplicação tem seu pipeline integrado ao HEROKU, possibilitando que todo Push bem sucedido vá para produção de forma totalmente automatizada, com deploys progressivos para evitar indisponibilidade do serviço.
 
-#### ARQUITETURA
+### ARQUITETURA
 ![Arquitetura](https://user-images.githubusercontent.com/11720000/95804478-2732a880-0cd9-11eb-9f6e-3e2a72a963bc.png)
 
-#### HTTP ROUTES
+### HTTP ROUTES
 
 <b>POST</b> /auth/login<br />
 <b>POST</b> /auth/logout<br />
