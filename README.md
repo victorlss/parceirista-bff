@@ -18,4 +18,31 @@ Nossa aplicação tem seu pipeline integrado ao HEROKU, possibilitando que todo 
 #### ARQUITETURA
 ![Arquitetura](https://user-images.githubusercontent.com/11720000/95804478-2732a880-0cd9-11eb-9f6e-3e2a72a963bc.png)
 
+#### HTTP ROUTES
 
+<b>POST</b> /auth/login<br />
+<b>POST</b> /auth/logout<br />
+<br />
+<b>POST</b> /contracts<br />
+<b>GET</b> /contracts/:id<br />
+<b>DELETE</b> /contracts<br />
+<b>GET</b> /contracts/user/:id<br />
+<br />
+<b>GET</b> /health<br />
+<br />
+<b>POST</b> /payments<br />
+<b>GET</b> /payments/:id<br />
+<br />
+<b>POST</b> /ratings<br />
+<b>GET</b> /ratings/:id<br />
+<b>DELETE</b> /ratings/:id<br />
+<br />
+<b>POST</b> /services<br />
+<b>GET</b> /services/:id<br />
+<b>GET</b> /services/professional/:id<br />
+<br />
+<b>POST</b> /users<br />
+<b>GET</b> /users/:id<br />
+<b>GET</b> /users/professional<br />
+<b>GET</b> /users/business<br />
+<b>DELETE</b> /users/:id<br />
