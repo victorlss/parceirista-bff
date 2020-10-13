@@ -1,5 +1,5 @@
 # PARCEIRISTA (BFF) - HACKATHON GETNET 2020
-![PARCEIRISTA](https://github.com/victorlss/parceirista-bff/blob/main/assets/logo.png?raw=true)
+![parceirista-logo](https://user-images.githubusercontent.com/11720000/95804671-c0fa5580-0cd9-11eb-87bb-d8f2ff0af5f0.png)
 
 ### PROPOSTA DE VALOR
 O Parceirista tem como missão facilitar a vida dos microempreendedores por meio de acesso a serviços essenciais para a estruturação do seu novo negócio, com o pagamento destes serviços acontecendo gradualmente através de uma porcentagem da receita gerada pela operação do negócio. 
