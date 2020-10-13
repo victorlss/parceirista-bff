@@ -18,6 +18,32 @@ Nossa aplicação tem seu pipeline integrado ao HEROKU, possibilitando que todo 
 ### ARQUITETURA
 ![Arquitetura](https://user-images.githubusercontent.com/11720000/95804478-2732a880-0cd9-11eb-9f6e-3e2a72a963bc.png)
 
+### EXECUTANDO A APLICAÇÃO
+Instale as dependencias executando os comandos:<br />
+`yarn install` ou `npm install`<br />
+<br />
+Adicione as variavéis de ambiente no arquivo <b>.env</b><br />
+<br />
+Execute o projeto com o comando:<br />
+`yarn start`<br />
+<br />
+Para executar em modo desenvolvimento (com nodemon), utilize o comando:<br />
+`yarn dev` ou `npm run dev`
+
+### EXECUTANDO A APLICAÇÃO COM DOCKER
+Contrua a imagem docker com o comando:<br />
+`docker build -t  <nome-da-imagem> .`<br />
+<br />
+Execute a imagem contruida com o comando:<br />
+`docker run -p 8080:8080 --env-file .env parceirista-bff`<br />
+
+### EXECUTANDO A APLICAÇÃO COM DOCKER COMPOSE
+Contrua a imagem docker com o comando:<br />
+`docker compose build`<br />
+<br />
+Execute a imagem contruida com o comando:<br />
+`docker compose up`<br />
+
 ### HTTP ROUTES
 
 <b>POST</b> /auth/login<br />
