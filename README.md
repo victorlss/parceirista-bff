@@ -16,5 +16,6 @@ NoSQL mais famoso do momento, consegue suportar gigantescos fluxos de dados. Nos
 Nossa aplicação tem seu pipeline integrado ao HEROKU, possibilitando que todo Push bem sucedido vá para produção de forma totalmente automatizada, com deploys progressivos para evitar indisponibilidade do serviço.
 
 #### ARQUITETURA
-![Arquitetura](https://user-images.githubusercontent.com/11720000/95804320-c1462100-0cd8-11eb-9229-c5f4354f1a7f.png)
+![Arquitetura](https://user-images.githubusercontent.com/11720000/95804478-2732a880-0cd9-11eb-9f6e-3e2a72a963bc.png)
+
 
